@@ -1,9 +1,10 @@
 import React from 'react';
 
 const About = () => {
-    return(
+    return (
         <div>
-            About
+            <h2>About</h2>
+            This is about page
         </div>
     )
 }
