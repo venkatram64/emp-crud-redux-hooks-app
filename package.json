@@ -23,9 +23,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 8081\"",
+    "dev": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 8083\"",
     "start": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 8081\"",
-    "build": "concurrently \"react-scripts build\" \"json-server --watch db.json --port 8081\"",
+    "build": "concurrently \"react-scripts build\" \"json-server --watch db.json --port 8082\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
