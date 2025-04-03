@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -11,7 +11,7 @@ const ListEmployees = () => {
 
   const navigate = useNavigate();
 
-
+  const emp = useSelector((state) => state.employee);
 
   const fetchEmployees = async () => {
     const results = await axios.get("http://localhost:8081/employees"
@@ -21,7 +21,13 @@ const ListEmployees = () => {
   };
   useEffect(() => {
     console.log("fetching data...");
-    fetchEmployees();
+    if (emp && emp.employees.length > 0) {
+      console.log("fetching from store...");
+      setEmployees(emp.employees);
+    } else {
+      console.log("fetching from rest api...");
+      fetchEmployees();
+    }
   }, []);
 
   const deleteEmp = async (emp) => {
