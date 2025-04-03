@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 
 const ViewEmployee = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const [employee, setEmployee] = useState({
     firstName: "",
@@ -36,6 +38,15 @@ const ViewEmployee = () => {
       <h3>{email}</h3>
       <h3>{empNo}</h3>
       <h3>{department}</h3>
+
+      <div className="mt-3">
+        <button
+          className="btn btn-primary btn-block"
+          onClick={() => navigate("/employees")}
+        >
+          Back to Employee List
+        </button>
+      </div>
     </div>
   );
 };

@@ -117,7 +117,16 @@ const AddEmployee = () => {
               onChange={(e) => onInputChange(e)}
             />
           </div>
-          <button className="btn btn-primary btn-block">Add Employee</button>
+          <div className="mt-3">
+            <button className="btn btn-primary btn-block my-4">Add Employee</button>
+            <button
+              className="btn btn-primary btn-block"
+              onClick={() => navigate("/employees")}
+            >
+              Back to Employee List
+            </button>
+          </div>
+
         </form>
       </div>
     </div>
