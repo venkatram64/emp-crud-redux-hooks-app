@@ -21,7 +21,7 @@ const ListEmployees = () => {
   };
   useEffect(() => {
     console.log("fetching data...");
-    if (emp && emp.employees.length > 0) {
+    if (emp && emp.employees && emp.employees.length > 0) {
       console.log("fetching from store...");
       setEmployees(emp.employees);
     } else {
