@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { useHistory } from 'react-router-dom';
 
 const EditEmployee = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const EditEmployee = () => {
     department: "",
   });
 
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const fetchEmployee = async (id) => {
     const result = await axios.get(`http://localhost:8081/employees/${id}`);
@@ -130,7 +131,7 @@ const EditEmployee = () => {
             <button className="btn btn-primary btn-block">Edit Employee</button>
             <button
               className="btn btn-primary btn-block"
-              onClick={() => navigate("/employees")}
+              onClick={() => history.push("/employees")}
             >
               Back to Employee List
             </button>

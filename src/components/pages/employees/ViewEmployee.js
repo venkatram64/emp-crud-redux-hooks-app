@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
+import { useHistory } from 'react-router-dom';
 
 const ViewEmployee = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const [employee, setEmployee] = useState({
     firstName: "",
@@ -42,7 +43,7 @@ const ViewEmployee = () => {
       <div className="mt-3">
         <button
           className="btn btn-primary btn-block"
-          onClick={() => navigate("/employees")}
+          onClick={() => history.push("/employees")}
         >
           Back to Employee List
         </button>
