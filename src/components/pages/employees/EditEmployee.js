@@ -18,6 +18,7 @@ const EditEmployee = () => {
   });
 
   const history = useHistory();
+  const navigate = useNavigate();
 
   const fetchEmployee = async (id) => {
     const result = await axios.get(`http://localhost:8081/employees/${id}`);
