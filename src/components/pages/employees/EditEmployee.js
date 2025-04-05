@@ -129,7 +129,12 @@ const EditEmployee = () => {
           </div>
           <div className="mt-3">
             <button className="btn btn-primary btn-block">Edit Employee</button>
-
+            <button
+              className="btn btn-primary btn-block"
+              onClick={() => navigate("/employees")}
+            >
+              Back to Employee List
+            </button>
           </div>
         </form>
       </div>

@@ -29,3 +29,11 @@ git remote add origin https://github.com/venkatram64/emp-crud-redux-hooks-app.gi
 git push -u origin main
 
 #https://emp-crud-redux-hooks-ik3xwk5cf-venkatram-r-veerareddys-projects.vercel.app/employees
+
+--------------------
+
+git add .
+
+git commit -m "my commit"
+
+git push -u origin main

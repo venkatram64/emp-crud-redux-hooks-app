@@ -35,12 +35,12 @@ const AddEmployee = () => {
     }
 
     const checkEmail =
-      emp && emp.employees.find((e) => e.email === email && email);
+      emp && emp.employees.find((e) => e.email === email);
     if (checkEmail) {
       return toast.error("Email is already taken.");
     }
     const checkEmpNo =
-      emp && emp.employees.find((e) => e.empNo === empNo && empNo);
+      emp && emp.employees.find((e) => e.empNo === empNo);
     if (checkEmpNo) {
       return toast.error("EmpNo is already taken.");
     }

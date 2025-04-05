@@ -7,7 +7,7 @@ const ViewEmployee = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
-
+  const navigate = useNavigate();
 
   const [employee, setEmployee] = useState({
     firstName: "",
@@ -40,7 +40,12 @@ const ViewEmployee = () => {
       <h3>{department}</h3>
 
       <div className="mt-3">
-
+        <button
+          className="btn btn-primary btn-block"
+          onClick={() => navigate("/employees")}
+        >
+          Back to Employee List
+        </button>
       </div>
     </div>
   );
