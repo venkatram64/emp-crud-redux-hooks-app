@@ -10,18 +10,18 @@
     },
     {
       "id": "-EtjxNBfOhR-EUOrtWEcj",
-      "firstName": "venkat",
-      "lastName": "veerareddy",
+      "firstName": "Venkat",
+      "lastName": "Veerareddy",
       "email": "v@v.com",
       "empNo": "v1234",
       "department": "Tech Lead"
     },
     {
-      "id": "bMTKak7jFPaHr110H2vym",
-      "firstName": "Vashista",
-      "lastName": "K",
-      "email": "v@k.com",
-      "empNo": "v100",
+      "id": "PiGdu98Iq6PQVDcrTwLa9",
+      "firstName": "Ram",
+      "lastName": "Laxman",
+      "email": "ram@ram.com",
+      "empNo": "R100",
       "department": "Tech Manager"
     }
   ]
