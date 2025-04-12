@@ -19,6 +19,7 @@ const ListEmployees = () => {
     setEmployees(results.data);
     dispatch({ type: "DISPLAY_EMPLOYEE", payload: results.data });
   };
+
   useEffect(() => {
     console.log("fetching data...");
     if (emp && emp.employees && emp.employees.length > 0) {
