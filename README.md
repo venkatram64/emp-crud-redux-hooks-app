@@ -1,3 +1,25 @@
+to create a project:
+
+visit following
+
+https://create-react-app.dev/
+
+from https://create-react-app.dev/docs/getting-started
+
+step 1:
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+
+
+
+
+----------------------------
+
+
 to run on local
 Step 1:
 npm install
