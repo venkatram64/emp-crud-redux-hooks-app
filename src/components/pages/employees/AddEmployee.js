@@ -4,7 +4,28 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-
+/**
+ * This class uses react-redux to add an employee to the store.
+ * The store is located in /src/redux/store.js and is created using
+ * the createStore function from 'redux' and the 'rootReducer' function
+ * from /src/redux/rootReducer.js
+ * The root reducer is created using combineReducers which takes an object
+ * with the name of the reducer as the key and the reducer function as the
+ * value. In this case, the only reducer is the 'employeeReducer' from
+ * /src/redux/reducers/employeeReducer.js
+ * The employeeReducer handles the following actions:
+ *  - ADD_EMPLOYEE: adds a new employee to the store
+ *  - DISPLAY_EMPLOYEE: sets the state of the employee in the store to the
+ *    employees fetched from the rest api
+ * The employees are fetched from the rest api located at
+ * http://localhost:8081/employees
+ * The employee is added to the store using the useDispatch hook and the
+ * addEmployee function is called with the employee as the argument
+ * The addEmployee function is defined in the employeeReducer and is
+ * called with the employee as the argument
+ * The employee is then added to the state of the store and the component
+ * is updated with the new employee
+ */
 const AddEmployee = () => {
   const [employee, setEmployee] = useState({
     id: nanoid(),
@@ -16,7 +37,14 @@ const AddEmployee = () => {
   });
 
   const dispatch = useDispatch();
-
+  //useSelector is a hook that allows you to access the state of the store
+  //and subscribe to changes in the state. It takes a function as an argument
+  //that is called with the state of the store as the argument. The function
+  //should return a value that is the value of the state that you want to
+  //access. In this case, the function is an arrow function that returns the
+  //state of the employee. The employee state is an object with the following
+  //properties: employees, which is an array of objects with the following
+  //properties: id, firstName, lastName, email, empNo, department.
   const emp = useSelector((state) => state.employee);
 
   const navigate = useNavigate();

@@ -45,11 +45,11 @@ const EditEmployee = () => {
     }
     debugger;
 
-    if (emp && emp.email !== email) {
+    if (emp && emp.email === email) {
       return toast.error("Email is already taken.");
     }
 
-    if (emp && emp.empNo !== empNo) {
+    if (emp && emp.empNo === empNo) {
       return toast.error("EmpNo is already taken.");
     }
     editEmployee(employee);
