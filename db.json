@@ -15,14 +15,6 @@
       "email": "v@v.com",
       "empNo": "v1234",
       "department": "Tech Lead"
-    },
-    {
-      "id": "PiGdu98Iq6PQVDcrTwLa9",
-      "firstName": "Ram",
-      "lastName": "Laxman",
-      "email": "ram@ram.com",
-      "empNo": "R100",
-      "department": "Tech Manager"
     }
   ]
 }
